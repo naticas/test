@@ -65,7 +65,7 @@ app.get('/Fire/:name', (req, res, next) => {
     if (err) {
       console.error(err);
     } else {
-      console.log('complete');
+      console.log('complete file :', req.params.name);
     }
   });
 });
