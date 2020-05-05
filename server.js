@@ -13,5 +13,9 @@ app.get('/page2', (req, res) => {
     res.send(str);
 })
 
+app.get('/manifest.mpd', (req, res) => {
+    res.sendFile(path.join(__dirname, '/manifest.mpd'));
+})
+
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
 

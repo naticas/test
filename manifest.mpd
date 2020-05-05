@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MPD profiles="urn:mpeg:dash:profile:isoff-live:2011" type="dynamic" availabilityStartTime="2020-05-04T10:12:02Z" minimumUpdatePeriod="PT4.0S" minBufferTime="PT4.0S" publishTime="2020-05-05T05:28:22Z" timeShiftBufferDepth="PT60.0S" suggestedPresentationDelay="PT4.0S" xmlns="urn:mpeg:dash:schema:mpd:2011" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 DASH-MPD.xsd">
+	<Period start="PT0S" id="1">
+		<AdaptationSet mimeType="video/mp4" startWithSAP="1" segmentAlignment="true">
+			<SegmentTemplate timescale="10000000" presentationTimeOffset="0" media="$RepresentationID$_Segment-$Time$.m4v" initialization="$RepresentationID$_init.m4i">
+				<SegmentTimeline>
+					<S t="693335385670" d="40040000" r="14" />
+				</SegmentTimeline>
+			</SegmentTemplate>
+			<Representation width="416" height="240" frameRate="30000/1001" codecs="avc1.4d401e" scanType="progressive" id="1588587109615item-01item" bandwidth="700000" />
+			<Representation width="640" height="480" frameRate="30000/1001" codecs="avc1.4d401e" scanType="progressive" id="1588587109615item-02item" bandwidth="1500000" />
+			<Representation width="1280" height="720" frameRate="30000/1001" codecs="avc1.4d402a" scanType="progressive" id="1588587109615item-03item" bandwidth="2500000" />
+		</AdaptationSet>
+		<AdaptationSet mimeType="audio/mp4" startWithSAP="1" lang="eng" segmentAlignment="true">
+			<SegmentTemplate timescale="10000000" presentationTimeOffset="0" media="$RepresentationID$_Segment-$Time$.m4a" initialization="$RepresentationID$_init.m4i">
+				<SegmentTimeline>
+					<S t="693335578586" d="40106667" r="1" />
+					<S t="693415791920" d="40106666" />
+					<S t="693455898586" d="39680000" />
+					<S t="693495578586" d="40106667" r="1" />
+					<S t="693575791920" d="40106666" />
+					<S t="693615898586" d="40106667" r="1" />
+					<S t="693696111920" d="39680000" />
+					<S t="693735791920" d="40106666" />
+					<S t="693775898586" d="40106667" r="1" />
+					<S t="693856111920" d="40106666" />
+					<S t="693896218586" d="40106667" />
+				</SegmentTimeline>
+			</SegmentTemplate>
+			<Representation audioSamplingRate="48000" codecs="mp4a.40.5" id="1588587109615item-04item" bandwidth="40000" />
+		</AdaptationSet>
+	</Period>
+</MPD>
