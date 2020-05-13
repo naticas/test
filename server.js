@@ -17,8 +17,8 @@ app.get('/page2', (req, res) => {
 })
 
 app.get('/manifest.mpd', (req, res, next) => {
-    // res.header("Access-Control-Allow-Origin", "*");
-    // res.header("Access-Control-Allow-Headers", "X-Requested-With");   
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");   
     res.sendFile(path.join(__dirname, '/manifest.mpd'));
 
     next();
