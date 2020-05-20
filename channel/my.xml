@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServiceList xmlns="urn:dvb:metadata:servicediscovery:2019" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tva="urn:tva:metadata:2019" version="1" xsi:schemaLocation="urn:dvb:metadata:servicediscovery:2019 ../dvbi_v1.0.xsd">
+  <Name>DVB-I example service list</Name>
+  <ProviderName>DVB</ProviderName>
+  <LCNTableList>
+    <LCNTable>
+      <LCN channelNumber="1000" serviceRef="sid1000"/>
+    </LCNTable>
+  </LCNTableList>
+  <ContentGuideSource CGSID="cgid-1">
+    <ProviderName>DVB-I Reference Application</ProviderName>
+    <ScheduleInfoEndpoint contentType="application/xml">
+      <URI>https://stage.sofiadigital.fi/dvb/dvb-i-reference-application/backend/schedule.php</URI>
+    </ScheduleInfoEndpoint>
+  </ContentGuideSource>
+  <Service version="1">
+    <UniqueIdentifier>sid1000</UniqueIdentifier>
+    <ServiceInstance priority="2">
+      <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
+      <DASHDeliveryParameters>
+        <UriBasedLocation contentType="application/dash+xml">
+          <URI>https://cmafref.akamaized.net/cmaf/live-ull/2009972/test9/out.mpd</URI>
+        </UriBasedLocation>
+      </DASHDeliveryParameters>
+    </ServiceInstance>
+    <ServiceName>My Channel</ServiceName>
+    <ProviderName>Akamai</ProviderName>
+    <RelatedMaterial>
+      <tva:HowRelated href="urn:dvb:metadata:cs:HowRelatedCS:2019:1001.2"/>
+      <tva:MediaLocator>
+        <tva:MediaUri contentType="image/png">https://stage.sofiadigital.fi/dvb/dvb-i-reference-application/backend/channel_icons/chicon_akamai.png</tva:MediaUri>
+      </tva:MediaLocator>
+    </RelatedMaterial>
+    <ContentGuideServiceRef>cgsid_1000</ContentGuideServiceRef>
+  </Service>
+  
+</ServiceList>
