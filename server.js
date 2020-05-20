@@ -7,6 +7,16 @@ const xml2js = require('xml2js');
 const app = express();
 const port = 3000;
 
+const parser = new xml2js.Parser();
+
+const xml = fs.readFileSync(path.join(__dirname, '/channel/my.xml'), 'utf-8');
+let xmlStr = '';
+
+parser.parseString(xml, (err, result) => {
+  console.log('result :', JSON.stringify(result));
+  xmlStr = result;
+});
+
 app.use(cors());
 
 app.get('/', (req, res, next) => {
@@ -29,22 +39,7 @@ app.get('/manifest.mpd', (req, res, next) => {
 });
 
 app.get('/channel', (req, res, next) => {
-  console.log('test channel uri');
-  fs.readFile(__dirname + '/channle/my.xml', (err, data) => {
-    console.log('data');
-    res.writeHead(200, { 'Content-Type': 'text/xml' });
-    res.write(data);
-    res.end();
-  });
-
-  //   const parser = new xml2js.Parser();
-
-  //   fs.readFile(__dirname + 'channle/my.xml', (err, data) => {
-  //     parser.parseString(data, (err, result) => {
-  //       console.dir(result);
-  //       console.log('done!!');
-  //     });
-  //   });
+  res.send(xmlStr);
 
   next();
 });
