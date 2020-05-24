@@ -39,7 +39,10 @@ app.get('/manifest.mpd', (req, res, next) => {
 });
 
 app.get('/channel', (req, res, next) => {
+  console.log(xmlStr);
   res.send(xmlStr);
+
+  res.json(JSON.parse(xmlStr));
 
   next();
 });
