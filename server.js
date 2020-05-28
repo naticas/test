@@ -47,4 +47,10 @@ app.get('/channel', (req, res, next) => {
   next();
 });
 
+app.get('/Fire', (req, res, next) => {
+	res.sendFile(path.join(__dirname, '/Fire/Firework_HD.mpd'));
+
+	next();
+});
+
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
