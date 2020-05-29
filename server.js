@@ -22,6 +22,7 @@ app.use(cors());
 app.get('/', (req, res, next) => {
   res.send('hello world');
 
+  res.end();
   next();
 });
 
@@ -29,12 +30,14 @@ app.get('/page2', (req, res) => {
   const str = '두번째 페이지 입니다';
   res.send(str);
 
+  res.end();
   next();
 });
 
 app.get('/manifest.mpd', (req, res, next) => {
   res.sendFile(path.join(__dirname, '/manifest.mpd'));
 
+  res.end();
   next();
 });
 
@@ -44,6 +47,7 @@ app.get('/channel', (req, res, next) => {
 
   res.json(JSON.parse(xmlStr));
 
+  res.end();
   next();
 });
 
@@ -58,6 +62,7 @@ app.get('/Fire', (req, res, next) => {
     }
   });
 
+  res.end();
 	next();
 });
 
