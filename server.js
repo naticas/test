@@ -52,10 +52,6 @@ app.get('/channel', (req, res, next) => {
 
 app.get('/Fire', (req, res, next) => {
   console.log(req.headers);
-  req.header('User-Agent');
-
-  res.set('Content-Type', 'text/plain');
-  
   // res.download('./Fire/Firework_HD.mpd', (err) => {
   //   if (err) {
   //     console.error(err);
@@ -65,7 +61,7 @@ app.get('/Fire', (req, res, next) => {
   //   }
   // });
 
-  res.sendFile(path.join(__dirname, '/Fire/Firework_HD.mpd'), (error) => {
+  res.sendFile(path.join(__dirname, 'test.txt'), (error) => {
     if (error) {
       console.error(error);
     } else {
