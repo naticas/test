@@ -19,58 +19,16 @@ parser.parseString(xml, (err, result) => {
 
 app.use(cors());
 
-app.get('/', (req, res, next) => {
-  res.send('hello world');
-
-  res.end();
-  next();
-});
-
-app.get('/page2', (req, res) => {
-  const str = '두번째 페이지 입니다';
-  res.send(str);
-
-  res.end();
-  next();
-});
-
-app.get('/manifest.mpd', (req, res, next) => {
-  res.sendFile(path.join(__dirname, '/manifest.mpd'));
-
-  res.end();
-  next();
-});
-
-app.get('/channel', (req, res, next) => {
-  res.send(xmlStr);
-
-  res.json(JSON.parse(xmlStr));
-
-  res.end();
-  next();
-});
-
-app.get('/Fire', (req, res, next) => {
+app.get('/', (req, res) => {
   console.log(req.headers);
-  // res.download('./Fire/Firework_HD.mpd', (err) => {
-  //   if (err) {
-  //     console.error(err);
-  //     return;
-  //   } else {
-  //     console.log('do somthing');
-  //   }
-  // });
-
-  res.sendFile(path.join(__dirname, 'test.txt'), (error) => {
-    if (error) {
-      console.error(error);
+  const file = path.resolve(__dirname, '/Fire/Firework_HD.mpd');
+  res.sendFile(file, (err) => {
+    if (err) {
+      console.error(err);
     } else {
       console.log('do something');
     }
-  });
-
-  res.end();
-	next();
+  })
 });
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
