@@ -20,15 +20,35 @@ parser.parseString(xml, (err, result) => {
 app.use(cors());
 
 app.get('/', (req, res) => {
-  const file = path.resolve(__dirname, 'test.txt');
-  console.log(req.headers, file);
-  res.sendFile(file, (err) => {
+  const file = path.resolve(__dirname, 'Fire/Firework_HD.mpd');
+  // const stat = fs.statSync(file);
+  // const total = stat.size;
+
+  // if (req.headers.range) {
+  //   console.log(req.headers.range);
+  // }
+
+  // fs.exists(file, (exists) => {
+  //   if (exists) {
+
+  //   }
+  // })
+
+  // res.sendFile(file, (err) => {
+  //   if (err) {
+  //     console.error(err);
+  //   } else {
+  //     console.log('do something');
+  //   }
+  // })
+
+  res.download(file, err => {
     if (err) {
       console.error(err);
     } else {
       console.log('do something');
     }
-  })
+  });
 });
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
