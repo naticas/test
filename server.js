@@ -48,7 +48,8 @@ app.get('/channel', (req, res, next) => {
 });
 
 app.get('/Fire', (req, res, next) => {
-	res.sendFile(path.join(__dirname, '/Fire/Firework_HD.mpd'));
+  console.log('path dir :', path.join(__dirname), '/Fire/Firework_HD.mpd');
+  res.download(path.join(__dirname), '/Fire/Firework_HD.mpd');
 
 	next();
 });
