@@ -20,8 +20,8 @@ parser.parseString(xml, (err, result) => {
 app.use(cors());
 
 app.get('/', (req, res) => {
-  const file = './Fire/Firework_HD.mpd';
-  console.log(req.headers);
+  const file = path.resolve(__dirname, 'test.txt');
+  console.log(req.headers, file);
   res.sendFile(file, (err) => {
     if (err) {
       console.error(err);
