@@ -25,7 +25,7 @@ app.get('/', (req,res, next) => {
   next();
 })
 
-app.get('/', (req, res) => {
+app.get('/Fire', (req, res) => {
   const file = path.resolve(__dirname, 'Fire/Firework_HD.mpd');
 
   res.download(file, err => {
