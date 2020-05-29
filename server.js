@@ -53,12 +53,20 @@ app.get('/channel', (req, res, next) => {
 
 app.get('/Fire', (req, res, next) => {
   
-  res.download('./Fire/Firework_HD.mpd', (err) => {
-    if (err) {
-      console.error(err);
-      return;
+  // res.download('./Fire/Firework_HD.mpd', (err) => {
+  //   if (err) {
+  //     console.error(err);
+  //     return;
+  //   } else {
+  //     console.log('do somthing');
+  //   }
+  // });
+
+  res.sendFile(path.join(__dirname, '/Fire/Firework_HD.mpd'), (error) => {
+    if (error) {
+      console.error(error);
     } else {
-      console.log('do somthing');
+      console.log('do something');
     }
   });
 
