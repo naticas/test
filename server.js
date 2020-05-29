@@ -13,7 +13,7 @@ const xml = fs.readFileSync(path.join(__dirname, '/channel/my.xml'), 'utf-8');
 let xmlStr = '';
 
 parser.parseString(xml, (err, result) => {
-  console.log('result :', JSON.stringify(result));
+  // console.log('result :', JSON.stringify(result));
   xmlStr = result;
 });
 
@@ -42,7 +42,6 @@ app.get('/manifest.mpd', (req, res, next) => {
 });
 
 app.get('/channel', (req, res, next) => {
-  console.log(xmlStr);
   res.send(xmlStr);
 
   res.json(JSON.parse(xmlStr));
@@ -52,6 +51,10 @@ app.get('/channel', (req, res, next) => {
 });
 
 app.get('/Fire', (req, res, next) => {
+  console.log(req.headers);
+  req.header('User-Agent');
+
+  res.set('Content-Type', 'text/plain');
   
   // res.download('./Fire/Firework_HD.mpd', (err) => {
   //   if (err) {
