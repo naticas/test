@@ -19,7 +19,7 @@
       <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
       <DASHDeliveryParameters>
         <UriBasedLocation contentType="application/dash+xml">
-          <URI>https://cmafref.akamaized.net/cmaf/live-ull/2009972/test9/out.mpd</URI>
+          <URI>http://172.20.10.5:3000/Fire</URI>
         </UriBasedLocation>
       </DASHDeliveryParameters>
     </ServiceInstance>

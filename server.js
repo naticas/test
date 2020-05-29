@@ -28,7 +28,7 @@ app.get('/', (req,res, next) => {
 app.get('/channel', (req, res, next) => {
   res.send(xmlStr);
 
-  res.json(JSON.parse(xmlStr));
+  res.json(xmlStr);
 
   res.end();
   next();
@@ -44,6 +44,18 @@ app.get('/Fire', (req, res) => {
       console.log('do something');
     }
   });
+});
+
+app.get('/icon', (req,res) => {
+  const image = path.resolve(__dirname, 'icons/icon.png');
+
+  res.sendFile(image, (err) => {
+    if (err) {
+      console.error(err);
+    } else {
+      console.log('success icon image');
+    }
+  })
 });
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
