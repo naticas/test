@@ -23,7 +23,16 @@ app.get('/', (req,res, next) => {
   res.send('hello world');
 
   next();
-})
+});
+
+app.get('/channel', (req, res, next) => {
+  res.send(xmlStr);
+
+  res.json(JSON.parse(xmlStr));
+
+  res.end();
+  next();
+});
 
 app.get('/Fire', (req, res) => {
   const file = path.resolve(__dirname, 'Fire/Firework_HD.mpd');
