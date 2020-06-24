@@ -20,12 +20,15 @@ parser.parseString(xml, (err, result) => {
 app.use(cors());
 
 app.get('/', (req,res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
   res.send('hello world');
 
   next();
 });
 
 app.get('/channel', (req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+
   res.send(xmlStr);
 
   res.json(xmlStr);
@@ -35,6 +38,7 @@ app.get('/channel', (req, res, next) => {
 });
 
 app.get('/Fire', (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
   const file = path.resolve(__dirname, 'Fire/Firework_HD.mpd');
 
   res.download(file, err => {
@@ -47,6 +51,7 @@ app.get('/Fire', (req, res) => {
 });
 
 app.get('/icon', (req,res) => {
+  res.header("Access-Control-Allow-Origin", "*");
   const image = path.resolve(__dirname, 'icons/icon.png');
 
   res.sendFile(image, (err) => {
