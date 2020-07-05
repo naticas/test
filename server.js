@@ -53,16 +53,21 @@ app.get('/Fire', (req, res) => {
 app.get('/Fire/:name', (req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   
-  const fileName = path.resolve(__dirname, 'Fire/', req.params.name);
-  console.log('fileName', fileName)
-  res.sendFile(fileName,  (err) => {
+  const file = path.resolve(__dirname, 'Fire/', req.params.name);
+  // res.sendFile(file,  (err) => {
+  //   if (err) {
+  //     next(err)
+  //   } else {
+  //     console.log('Sent:', fileName)
+  //   }
+  // })
+  res.download(file, err => {
     if (err) {
-      next(err)
+      console.error(err);
     } else {
-      console.log('Sent:', fileName)
+      console.log('complete');
     }
-  })
-  
+  });
 });
 
 app.get('/icon', (req,res) => {
