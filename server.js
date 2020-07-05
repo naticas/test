@@ -50,6 +50,19 @@ app.get('/Fire', (req, res) => {
   });
 });
 
+app.get('/Fire/*.m4s', (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  const file = path.resolve(__dirname, 'Fire/*.m4s');
+
+  res.download(file, err => {
+    if (err) {
+      console.error(err);
+    } else {
+      console.log('젭알 돼라.');
+    }
+  });
+});
+
 app.get('/icon', (req,res) => {
   res.header("Access-Control-Allow-Origin", "*");
   const image = path.resolve(__dirname, 'icons/icon.png');
