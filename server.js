@@ -53,7 +53,8 @@ app.get('/Fire', (req, res) => {
 app.get('/Fire/:name', (req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   
-  const fileName = req.params.name
+  const fileName = path.resolve(__dirname, 'Fire/', req.params.name);
+  console.log('fileName', fileName)
   res.sendFile(fileName,  (err) => {
     if (err) {
       next(err)
