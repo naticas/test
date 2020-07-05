@@ -50,17 +50,18 @@ app.get('/Fire', (req, res) => {
   });
 });
 
-app.get('/Fire/*.m4s', (req, res) => {
+app.get('/Fire/:name', (req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
-  const file = path.resolve(__dirname, 'Fire/*.m4s');
-
-  res.download(file, err => {
+  
+  const fileName = req.params.name
+  res.sendFile(fileName,  (err) => {
     if (err) {
-      console.error(err);
+      next(err)
     } else {
-      console.log('젭알 돼라.');
+      console.log('Sent:', fileName)
     }
-  });
+  })
+  
 });
 
 app.get('/icon', (req,res) => {
