@@ -23,11 +23,11 @@
       <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
       <DASHDeliveryParameters>
         <UriBasedLocation contentType="application/dash+xml">
-          <URI>http://172.30.1.13:3000/Fire</URI>
+          <URI>http://172.30.1.13:3000/Fire/Firework_HD.mpd</URI>
         </UriBasedLocation>
       </DASHDeliveryParameters>
     </ServiceInstance>
-    <ServiceName>My Channel</ServiceName>
+    <ServiceName>Fire</ServiceName>
     <ProviderName>JH-Park</ProviderName>
     <RelatedMaterial>
       <tva:HowRelated href="urn:dvb:metadata:cs:HowRelatedCS:2019:1001.2"/>
@@ -44,11 +44,11 @@
       <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
       <DASHDeliveryParameters>
         <UriBasedLocation contentType="application/dash+xml">
-          <URI>http://172.30.1.13:3000/Lego</URI>
+          <URI>http://172.30.1.13:3000/Lego/the_LegoMovieSDR_Clip1.mpd</URI>
         </UriBasedLocation>
       </DASHDeliveryParameters>
     </ServiceInstance>
-    <ServiceName>My Channel</ServiceName>
+    <ServiceName>Lego</ServiceName>
     <ProviderName>JH-Park</ProviderName>
     <RelatedMaterial>
       <tva:HowRelated href="urn:dvb:metadata:cs:HowRelatedCS:2019:1001.2"/>
@@ -65,11 +65,11 @@
       <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
       <DASHDeliveryParameters>
         <UriBasedLocation contentType="application/dash+xml">
-          <URI>http://172.30.1.13:3000/Gaysby</URI>
+          <URI>http://172.30.1.13:3000/Gaysby/TheGreatGatsby_SDR.mpd</URI>
         </UriBasedLocation>
       </DASHDeliveryParameters>
     </ServiceInstance>
-    <ServiceName>My Channel</ServiceName>
+    <ServiceName>Gatsby</ServiceName>
     <ProviderName>JH-Park</ProviderName>
     <RelatedMaterial>
       <tva:HowRelated href="urn:dvb:metadata:cs:HowRelatedCS:2019:1001.2"/>
@@ -87,11 +87,11 @@
       <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
       <DASHDeliveryParameters>
         <UriBasedLocation contentType="application/dash+xml">
-          <URI>http://172.30.1.13:3000/MIHC</URI>
+          <URI>http://172.30.1.13:3000/MIHC/MIHC_out.mpd</URI>
         </UriBasedLocation>
       </DASHDeliveryParameters>
     </ServiceInstance>
-    <ServiceName>My Channel</ServiceName>
+    <ServiceName>MIHC</ServiceName>
     <ProviderName>JH-Park</ProviderName>
     <RelatedMaterial>
       <tva:HowRelated href="urn:dvb:metadata:cs:HowRelatedCS:2019:1001.2"/>
@@ -108,11 +108,11 @@
       <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
       <DASHDeliveryParameters>
         <UriBasedLocation contentType="application/dash+xml">
-          <URI>http://172.30.1.13:3000/Pacific/</URI>
+          <URI>http://172.30.1.13:3000/Pacific/PacificRimSDR.mpd</URI>
         </UriBasedLocation>
       </DASHDeliveryParameters>
     </ServiceInstance>
-    <ServiceName>My Channel</ServiceName>
+    <ServiceName>Pacific</ServiceName>
     <ProviderName>JH-Park</ProviderName>
     <RelatedMaterial>
       <tva:HowRelated href="urn:dvb:metadata:cs:HowRelatedCS:2019:1001.2"/>
