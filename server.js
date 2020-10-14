@@ -85,7 +85,7 @@ app.get('/icon', (req, res) => {
 
 app.get('/Lego', (req, res) => {
   res.header('Access-Control-Allow-Origin', '*');
-  const file = path.resolve(__dirname, 'Lego/the_LegoMovieSDR_clip1.mpd');
+  const file = path.resolve(__dirname, 'Lego/the_LegoMovieSDR_Clip1.mpd');
 
   res.download(file, (err) => {
     if (err) {
