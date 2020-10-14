@@ -5,6 +5,10 @@
   <LCNTableList>
     <LCNTable>
       <LCN channelNumber="1000" serviceRef="sid1000"/>
+      <LCN channelNumber="1001" serviceRef="sid1001"/>
+      <LCN channelNumber="1002" serviceRef="sid1002"/>
+      <LCN channelNumber="1003" serviceRef="sid1003"/>
+      <LCN channelNumber="1004" serviceRef="sid1004"/>
     </LCNTable>
   </LCNTableList>
   <ContentGuideSource CGSID="cgid-1">
@@ -15,7 +19,7 @@
   </ContentGuideSource>
   <Service version="1">
     <UniqueIdentifier>sid1000</UniqueIdentifier>
-    <ServiceInstance priority="2">
+    <ServiceInstance priority="1">
       <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
       <DASHDeliveryParameters>
         <UriBasedLocation contentType="application/dash+xml">
@@ -24,7 +28,7 @@
       </DASHDeliveryParameters>
     </ServiceInstance>
     <ServiceName>My Channel</ServiceName>
-    <ProviderName>Akamai</ProviderName>
+    <ProviderName>JH-Park</ProviderName>
     <RelatedMaterial>
       <tva:HowRelated href="urn:dvb:metadata:cs:HowRelatedCS:2019:1001.2"/>
       <tva:MediaLocator>
@@ -33,5 +37,89 @@
     </RelatedMaterial>
     <ContentGuideServiceRef>cgsid_1000</ContentGuideServiceRef>
   </Service>
-  
+
+  <Service version="1">
+    <UniqueIdentifier>sid1001</UniqueIdentifier>
+    <ServiceInstance priority="1">
+      <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
+      <DASHDeliveryParameters>
+        <UriBasedLocation contentType="application/dash+xml">
+          <URI>http://172.30.1.13:3000/Lego</URI>
+        </UriBasedLocation>
+      </DASHDeliveryParameters>
+    </ServiceInstance>
+    <ServiceName>My Channel</ServiceName>
+    <ProviderName>JH-Park</ProviderName>
+    <RelatedMaterial>
+      <tva:HowRelated href="urn:dvb:metadata:cs:HowRelatedCS:2019:1001.2"/>
+      <tva:MediaLocator>
+        <tva:MediaUri contentType="image/png">https://stage.sofiadigital.fi/dvb/dvb-i-reference-application/backend/channel_icons/chicon_akamai.png</tva:MediaUri>
+      </tva:MediaLocator>
+    </RelatedMaterial>
+    <ContentGuideServiceRef>cgsid_1001</ContentGuideServiceRef>
+  </Service>
+
+  <Service version="1">
+    <UniqueIdentifier>sid1002</UniqueIdentifier>
+    <ServiceInstance priority="1">
+      <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
+      <DASHDeliveryParameters>
+        <UriBasedLocation contentType="application/dash+xml">
+          <URI>http://172.30.1.13:3000/Gaysby</URI>
+        </UriBasedLocation>
+      </DASHDeliveryParameters>
+    </ServiceInstance>
+    <ServiceName>My Channel</ServiceName>
+    <ProviderName>JH-Park</ProviderName>
+    <RelatedMaterial>
+      <tva:HowRelated href="urn:dvb:metadata:cs:HowRelatedCS:2019:1001.2"/>
+      <tva:MediaLocator>
+        <tva:MediaUri contentType="image/png">https://stage.sofiadigital.fi/dvb/dvb-i-reference-application/backend/channel_icons/chicon_akamai.png</tva:MediaUri>
+      </tva:MediaLocator>
+    </RelatedMaterial>
+    <ContentGuideServiceRef>cgsid_1002</ContentGuideServiceRef>
+  </Service>
+
+
+  <Service version="1">
+    <UniqueIdentifier>sid1003</UniqueIdentifier>
+    <ServiceInstance priority="1">
+      <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
+      <DASHDeliveryParameters>
+        <UriBasedLocation contentType="application/dash+xml">
+          <URI>http://172.30.1.13:3000/MIHC</URI>
+        </UriBasedLocation>
+      </DASHDeliveryParameters>
+    </ServiceInstance>
+    <ServiceName>My Channel</ServiceName>
+    <ProviderName>JH-Park</ProviderName>
+    <RelatedMaterial>
+      <tva:HowRelated href="urn:dvb:metadata:cs:HowRelatedCS:2019:1001.2"/>
+      <tva:MediaLocator>
+        <tva:MediaUri contentType="image/png">https://stage.sofiadigital.fi/dvb/dvb-i-reference-application/backend/channel_icons/chicon_akamai.png</tva:MediaUri>
+      </tva:MediaLocator>
+    </RelatedMaterial>
+    <ContentGuideServiceRef>cgsid_1003</ContentGuideServiceRef>
+  </Service>
+
+ <Service version="1">
+    <UniqueIdentifier>sid1004</UniqueIdentifier>
+    <ServiceInstance priority="1">
+      <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
+      <DASHDeliveryParameters>
+        <UriBasedLocation contentType="application/dash+xml">
+          <URI>http://172.30.1.13:3000/MIHC</URI>
+        </UriBasedLocation>
+      </DASHDeliveryParameters>
+    </ServiceInstance>
+    <ServiceName>My Channel</ServiceName>
+    <ProviderName>JH-Park</ProviderName>
+    <RelatedMaterial>
+      <tva:HowRelated href="urn:dvb:metadata:cs:HowRelatedCS:2019:1001.2"/>
+      <tva:MediaLocator>
+        <tva:MediaUri contentType="image/png">https://stage.sofiadigital.fi/dvb/dvb-i-reference-application/backend/channel_icons/chicon_akamai.png</tva:MediaUri>
+      </tva:MediaLocator>
+    </RelatedMaterial>
+    <ContentGuideServiceRef>cgsid_1004</ContentGuideServiceRef>
+  </Service>  
 </ServiceList>
