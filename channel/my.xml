@@ -23,7 +23,7 @@
       <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
       <DASHDeliveryParameters>
         <UriBasedLocation contentType="application/dash+xml">
-          <URI>http://172.30.1.13:3000/Fire/Firework_HD.mpd</URI>
+          <URI>http://172.30.1.23:3000/Fire/Firework_HD.mpd</URI>
         </UriBasedLocation>
       </DASHDeliveryParameters>
     </ServiceInstance>
@@ -44,7 +44,7 @@
       <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
       <DASHDeliveryParameters>
         <UriBasedLocation contentType="application/dash+xml">
-          <URI>http://172.30.1.13:3000/Lego/the_LegoMovieSDR_Clip1.mpd</URI>
+          <URI>http://172.30.1.23:3000/Lego/the_LegoMovieSDR_Clip1.mpd</URI>
         </UriBasedLocation>
       </DASHDeliveryParameters>
     </ServiceInstance>
@@ -65,7 +65,7 @@
       <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
       <DASHDeliveryParameters>
         <UriBasedLocation contentType="application/dash+xml">
-          <URI>http://172.30.1.13:3000/Gaysby/TheGreatGatsby_SDR.mpd</URI>
+          <URI>http://172.30.1.23:3000/Gaysby/TheGreatGatsby_SDR.mpd</URI>
         </UriBasedLocation>
       </DASHDeliveryParameters>
     </ServiceInstance>
@@ -87,7 +87,7 @@
       <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
       <DASHDeliveryParameters>
         <UriBasedLocation contentType="application/dash+xml">
-          <URI>http://172.30.1.13:3000/MIHC/MIHC_out.mpd</URI>
+          <URI>http://172.30.1.23:3000/MIHC/MIHC_out.mpd</URI>
         </UriBasedLocation>
       </DASHDeliveryParameters>
     </ServiceInstance>
@@ -108,7 +108,7 @@
       <SourceType>urn:dvb:metadata:source:dvb-dash</SourceType>
       <DASHDeliveryParameters>
         <UriBasedLocation contentType="application/dash+xml">
-          <URI>http://172.30.1.13:3000/Pacific/PacificRimSDR.mpd</URI>
+          <URI>http://172.30.1.23:3000/Pacific/PacificRimSDR.mpd</URI>
         </UriBasedLocation>
       </DASHDeliveryParameters>
     </ServiceInstance>

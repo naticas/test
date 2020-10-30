@@ -50,6 +50,19 @@ app.get('/Fire', (req, res) => {
   });
 });
 
+// app.get(`/Fire`, (req, res) => {
+//   res.header('Access-Control-Allow-Origin', '*');
+//   const file = path.resolve(__dirname, 'Fire/');
+
+//   res.download(file, (err) => {
+//     if (err) {
+//       console.error(err);
+//     } else {
+//       console.log('do something');
+//     }
+//   });
+// });
+
 app.get('/Fire/:name', (req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
 
